@@ -1,13 +1,15 @@
 # Chat application [![Code Climate](https://codeclimate.com/github/codeclimate/codeclimate/badges/gpa.svg)](https://codeclimate.com/github/brunossilveira/chat)
 
 This is my chat application, that translates the messages using user selected dialect.
-It uses a custom api class to call (Crapola Web Translator)[http://www.degraeve.com/translator.php] and translate sent message, ActionCable to handle pub/sub funcionality
+It uses a custom api class to call [Crapola Web Translator](http://www.degraeve.com/translator.php) and translate sent message, ActionCable to handle pub/sub funcionality
 RSpec for testing, Bootstrap for aesthetics and more.
 
 Dialect options:
 * Yoda
 * Valley Girl
 * Binary
+
+An example on Heroku can be found [here](https://brunosssilveirachat.herokuapp.com)
 
 ### Added features
 
