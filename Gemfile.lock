@@ -79,11 +79,14 @@ GEM
       activesupport (>= 3.0.0)
     erubi (1.6.0)
     execjs (2.7.0)
+    fabrication (2.16.1)
     factory_girl (4.8.0)
       activesupport (>= 3.0.0)
     factory_girl_rails (4.8.0)
       factory_girl (~> 4.8.0)
       railties (>= 3.0.0)
+    faker (1.7.3)
+      i18n (~> 0.5)
     ffi (1.9.18)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
@@ -238,7 +241,9 @@ DEPENDENCIES
   devise!
   dotenv-rails
   enumerate_it
+  fabrication
   factory_girl_rails
+  faker
   jbuilder (~> 2.5)
   jquery-rails
   listen

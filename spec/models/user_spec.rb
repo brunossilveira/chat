@@ -1,5 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe '#validations' do
+    it { should have_many(:rooms) }
+    it { should have_many(:messages) }
+    it { should validate_presence_of(:dialect) }
+  end
 end
