@@ -1,6 +1,4 @@
 class RoomsController < ApplicationController
-  before_action :authenticate_user!
-
   def index
     @rooms = Room.all
   end
@@ -10,7 +8,7 @@ class RoomsController < ApplicationController
   end
 
   def create
-    @room = Room.create(room_params)
+    @room = current_user.rooms.build(room_params)
 
     if @room.save
       flash[:success] = 'Room created!'
@@ -27,12 +25,6 @@ class RoomsController < ApplicationController
   end
 
   private
-
-  def authenticate_user!
-    if !session[:username] || !session[:dialect]
-      redirect_to new_session_path
-    end
-  end
 
   def room_params
     params.require(:room).permit(:title)
