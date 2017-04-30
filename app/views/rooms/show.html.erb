@@ -8,11 +8,8 @@
 
 <%= simple_form_for @message, url: '#' do |f| %>
   <%= hidden_field_tag 'room_id', @room.id %>
-  <div class="form-group">
-    <%= f.label :body %>
-    <%= f.text_area :body, class: 'form-control' %>
-    <small class="text-muted">From 2 to 1000 characters</small>
-  </div>
+  <%= f.input :body %>
+  <small class="text-muted">From 2 to 1000 characters</small>
 
   <%= f.submit "Post", class: 'btn btn-primary btn-lg' %>
 <% end %>
