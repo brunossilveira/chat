@@ -1,0 +1,6 @@
+en:
+  enumerations:
+    dialect:
+      binary: 'Binary'
+      yoda: 'Yoda'
+      valley_girl: 'Valley Girl'

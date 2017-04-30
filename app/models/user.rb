@@ -4,4 +4,8 @@ class User < ApplicationRecord
 
   has_many :rooms, dependent: :destroy
   has_many :messages, dependent: :destroy
+
+  validates :dialect, presence: true
+
+  has_enumeration_for :dialect
 end

@@ -2,8 +2,9 @@
   <div class="row">
     <div class="col-lg-12">
       <p class="message-text">
-      <span class="text-muted"><%= message.user.email %> - <%= message.timestamp %></span><br>
-      <p><%= message.body %></p>
+        <img class="icon <%= message.user.dialect %>">
+        <span class="text-muted"><%= message.user.email %> - <%= message.timestamp %></span><br>
+        <p><%= message.body %></p>
       </p>
     </div>
   </div>

@@ -5,3 +5,22 @@
 .links {
   margin-top: 15px;
 }
+
+.icon {
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  border: 0;
+
+  &.yoda {
+    background-image: image-url('icons/yoda');
+  }
+
+  &.valley_girl {
+    background-image: image-url('icons/valley_girl');
+  }
+
+  &.binary {
+    background-image: image-url('icons/binary');
+  }
+}
