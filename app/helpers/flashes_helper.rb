@@ -5,6 +5,7 @@ module FlashesHelper
 
   def flash_class(level)
     return :danger if level == 'alert'
+    return :info if level == 'notice'
 
     level
   end
