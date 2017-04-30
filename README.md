@@ -1,24 +1,22 @@
-# README
+# Chat application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is my chat application, that translates the messages using user selected dialect.
 
-Things you may want to cover:
+Dialect options:
+* Yoda
+* Valley Girl
+* Binary
 
-* Ruby version
+It uses a custom api class to call (Crapola Web Translator)[http://www.degraeve.com/translator.php] and translate sent message, ActionCable to handle pub/sub funcionality
+RSpec for testing, Bootstrap for aesthetics and more.
 
-* System dependencies
+## Instalation
 
-* Configuration
+*You need to have redis installed in order for ActionCable to work.*
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+`git clone https://github.com/brunossilveira/chat.git`
+`create a .env file`
+`bundle install`
+`rake db:create`
+`rake db:migrate`
+`rails server`
