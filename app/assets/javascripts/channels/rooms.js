@@ -1,18 +1,28 @@
 jQuery(document).on('turbolinks:load', function() {
   var room_id = $('#room_id').val();
   var messagesField = $('#messages');
+  var usersField = $('#users');
 
   App.rooms = App.cable.subscriptions.create({ channel: 'RoomsChannel', room_id: room_id }, {
     connected: function() {
+      console.log('test');
     },
 
     disconnected: function() {
     },
 
     received: function(data) {
-      messagesField.append(data['message']);
-      $('#messages').scrollTop($('#messages')[0].scrollHeight);
-      $.rails.enableFormElements($($.rails.formSubmitSelector));
+      if (data.users) {
+        usersField.empty();
+
+        $.each(data.users, function(index, value) {
+          usersField.append('<li>' + value + '</li>');
+        });
+      } else {
+        messagesField.append(data['message']);
+        $('#messages').scrollTop($('#messages')[0].scrollHeight);
+        $.rails.enableFormElements($($.rails.formSubmitSelector));
+      }
     },
 
     speak: function(message) {
