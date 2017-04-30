@@ -13,6 +13,7 @@ gem 'sprockets', '>= 3.0.0'
 
 gem 'bootstrap-sass'
 gem 'simple_form'
+gem 'enumerate_it'
 
 group :development, :test do
   gem 'awesome_print'
