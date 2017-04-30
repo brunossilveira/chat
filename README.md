@@ -21,7 +21,9 @@ It has user authentication using Devise and the ability to create rooms
 
 `git clone https://github.com/brunossilveira/chat.git`
 
-`create a .env file`
+```
+create a .env file setting DATABASE_USERNAME and DATABASE_PASSWORD
+```
 
 `bundle install`
 
