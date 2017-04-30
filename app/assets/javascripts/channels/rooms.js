@@ -11,7 +11,7 @@ jQuery(document).on('turbolinks:load', function() {
 
     received: function(data) {
       messagesField.append(data['message']);
-
+      $('#messages').scrollTop($('#messages')[0].scrollHeight);
       $.rails.enableFormElements($($.rails.formSubmitSelector));
     },
 

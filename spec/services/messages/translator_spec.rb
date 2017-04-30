@@ -8,7 +8,9 @@ RSpec.describe Messages::Translator do
     subject { described_class.new(message, dialect).call }
 
     it 'translates message correctly' do
-      expect(subject).to eq("#{message} - #{dialect}")
+      expect(Chat::API::Dialect).to receive(:translate).with(message, dialect)
+
+      subject
     end
   end
 end

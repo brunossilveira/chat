@@ -1,3 +1,5 @@
+require 'api/dialect'
+
 module Messages
   class Translator
     attr_reader :message, :dialect
@@ -8,8 +10,9 @@ module Messages
     end
 
     def call
-      #TODO call API and really translate the message
-      "#{message} - #{dialect}"
+      response = Chat::API::Dialect.translate(message, dialect)
+
+      response.message if response
     end
   end
 end
