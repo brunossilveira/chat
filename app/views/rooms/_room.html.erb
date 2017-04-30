@@ -1,4 +1,7 @@
 <li class="list-group-item">
   <%= link_to room.title, room_path(room) %>
-  <span class="pull-right"><%= t('.created_by') %>: <%= room.user.email %></span>
+  <span class="pull-right">
+    <%= t('.created_by') %>: <%= room.user.email %>
+    <span class="label label-default"><%= room.messages.count %></span>
+  </span>
 </li>
