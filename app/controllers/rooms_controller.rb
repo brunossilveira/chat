@@ -11,7 +11,7 @@ class RoomsController < ApplicationController
     @room = current_user.rooms.build(room_params)
 
     if @room.save
-      flash[:success] = 'Room created!'
+      flash[:success] = 'Room created'
 
       redirect_to rooms_path
     else
@@ -21,6 +21,12 @@ class RoomsController < ApplicationController
 
   def show
     @room = Room.includes(:messages).find_by_id(params[:id])
+
+    unless @room
+      flash[:alert] = 'Room not found'
+      redirect_to root_path
+    end
+
     @message = Message.new
   end
 

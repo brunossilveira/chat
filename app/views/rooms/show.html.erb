@@ -1,6 +1,6 @@
 <h1><%= @room.title %></h1>
 
-<div id="messages" data-chat-room-id="<%= @room.id %>">
+<div id="messages" data-room-id="<%= @room.id %>">
   <%= render @room.messages %>
 </div>
 
@@ -11,5 +11,5 @@
   <%= f.input :body %>
   <small class="text-muted">From 2 to 1000 characters</small>
 
-  <%= f.submit "Post", class: 'btn btn-primary btn-lg' %>
+  <%= f.button :submit  %>
 <% end %>
