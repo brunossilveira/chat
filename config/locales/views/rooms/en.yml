@@ -1,0 +1,7 @@
+en:
+  rooms:
+    index:
+      title: 'Rooms'
+      create_room: 'Create room'
+    new:
+      title: 'New room'

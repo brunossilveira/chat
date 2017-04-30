@@ -1,15 +1,19 @@
-<h1><%= @room.title %></h1>
+<h3><%= @room.title %></h3>
 
 <div id="messages" data-room-id="<%= @room.id %>">
   <%= render @room.messages %>
 </div>
 
-<hr>
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container">
+    <%= simple_form_for @message, url: '#' do |f| %>
+      <%= hidden_field_tag 'room_id', @room.id %>
+      <div class="form-group">
+        <%= f.input :body, label: false, input_html: { class: 'form-control' } %>
+        <small class="text-muted">From 2 to 1000 characters</small>
+      </div>
 
-<%= simple_form_for @message, url: '#' do |f| %>
-  <%= hidden_field_tag 'room_id', @room.id %>
-  <%= f.input :body %>
-  <small class="text-muted">From 2 to 1000 characters</small>
-
-  <%= f.button :submit  %>
-<% end %>
+      <%= f.button :submit, class: 'btn btn-default' %>
+    <% end %>
+  </div>
+</nav>

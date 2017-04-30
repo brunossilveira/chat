@@ -1,7 +1,11 @@
 <h1><%= t('.title' )%></h1>
 
-<p class="lead"><%= link_to 'New chat room', new_room_path, class: 'btn btn-primary' %></p>
-
-<ul>
+<ul class="list-group">
   <%= render @rooms %>
 </ul>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container">
+    <%= link_to t(:create_room), new_room_path, class: 'btn btn-primary' %>
+  </div>
+</nav>
