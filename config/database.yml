@@ -14,5 +14,5 @@ test:
   database: chat_test
 
 production:
-  <<: *default
-  database: chat_production
+  adapter: postgresql
+  url: <%= ENV.fetch('DATABASE_URL') %>
