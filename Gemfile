@@ -14,6 +14,7 @@ gem 'sprockets', '>= 3.0.0'
 gem 'bootstrap-sass'
 gem 'simple_form'
 gem 'enumerate_it'
+gem 'devise', github: 'plataformatec/devise', branch: 'master'
 
 group :development, :test do
   gem 'awesome_print'
