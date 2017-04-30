@@ -1,7 +1,17 @@
 <header class='navigation' role='banner'>
   <div class="navbar navbar-default navbar-static-top">
     <div class="container">
-      Chat
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><%= app_name %></a>
+      <div class="navbar-collapse collapse navbar-responsive-collapse">
+        <ul class="nav navbar-nav">
+          <li><%= link_to(:rooms, rooms_path) %></li>
+        </ul>
+      </div>
     </div>
   </div>
 </header>
