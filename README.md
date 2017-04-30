@@ -14,29 +14,20 @@ RSpec for testing, Bootstrap for aesthetics and more.
 
 *You need to have redis installed in order for ActionCable to work.*
 
-```
-git clone https://github.com/brunossilveira/chat.git
-```
-```
-create a .env file
-```
-```
-bundle install
-```
-```
-rake db:create
-```
-```
-rake db:migrate
-```
-```
-rails server
-```
+`git clone https://github.com/brunossilveira/chat.git`
+
+`create a .env file`
+
+`bundle install`
+
+`rake db:create`
+
+`rake db:migrate`
+
+`rails server`
 
 ## Tests
 
 To run the tests just
 
-```
-rspec
-```
+`rspec`
