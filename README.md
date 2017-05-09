@@ -1,4 +1,4 @@
-# Chat application [![Code Climate](https://codeclimate.com/github/codeclimate/codeclimate/badges/gpa.svg)](https://codeclimate.com/github/brunossilveira/chat)
+# Chat application [![Code Climate](https://codeclimate.com/github/brunossilveira/chat.png)](https://codeclimate.com/github/brunossilveira/chat)
 
 This is my chat application, that translates the messages using user selected dialect.
 It uses a custom api class to call [Crapola Web Translator](http://www.degraeve.com/translator.php) and translate sent message, ActionCable to handle pub/sub funcionality
